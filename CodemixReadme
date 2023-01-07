@@ -1,0 +1,21 @@
+in the url manager :
+  'class' => 'codemix\localeurls\UrlManager',
+                'languages' => ['en-US', 'en', 'fr', 'de', 'es-*'],
+                'enableDefaultLanguageUrlCode' => true,
+                'enableLanguagePersistence' => false,
+
+
+to install the codemix:
+ composer require codemix/yii2-localeurls
+
+*create a folder named messages :
+and create inside this folder anoter folders with name of  like ('en-US', 'en', 'fr', 'de', 'es-)
+and inside thes folder create a file with name app.php and inside this app set return ['key of the world to convert it '=>'the reanslation']
+
+in the view we set the following code :
+
+<?= Html::a('France', ['site/index', 'language' => 'fr']) ?>
+<?= Html::a('English', ['site/index', 'language' => 'en-Us']) ?>
+this code will call fr folder and en-Us folder if you clik both of them
+
+**if you set multi languages and you need to now how actully work just the mechansim how through take the source text and then go an convert it what ever was been
